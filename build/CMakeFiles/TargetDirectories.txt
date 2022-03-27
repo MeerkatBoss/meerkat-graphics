@@ -1,3 +1,0 @@
-/home/meerkat/storage/programming/opengl/test/build/CMakeFiles/test.dir
-/home/meerkat/storage/programming/opengl/test/build/CMakeFiles/edit_cache.dir
-/home/meerkat/storage/programming/opengl/test/build/CMakeFiles/rebuild_cache.dir

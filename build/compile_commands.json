@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/meerkat/storage/programming/opengl/test/build",
-  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/test.dir/main.cpp.o -c /home/meerkat/storage/programming/opengl/test/main.cpp",
-  "file": "/home/meerkat/storage/programming/opengl/test/main.cpp"
-}
-]
