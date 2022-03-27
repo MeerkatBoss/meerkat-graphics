@@ -41,13 +41,6 @@ int main(int argc, char **argw)
 
     GLclampf Red = 0.0f, Green = 0.0f, Blue = 0.0f, Alpha = 1.0f;
     glClearColor(Red, Green, Blue, Alpha);
-    // vector3f vertices[3];
-    // vertices[0] = {-1.0f, -1.0f, 0.0f};
-    // vertices[1] = {1.0f, 0.0f, 0.0f};
-    // vertices[2] = {0.0f, 1.0f, 0.0f};
-    // glGenBuffers(1, &VBO);
-    // glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    // glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     glutDisplayFunc(RenderSceneCB);
     glutMainLoop();
     return 0;
