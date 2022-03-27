@@ -32,4 +32,6 @@
 *.app
 
 # cmake build
-build
+build/
+
+.vscode/
