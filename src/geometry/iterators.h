@@ -1,1 +1,0 @@
-#include "iterators/vertex_iterator.h"
