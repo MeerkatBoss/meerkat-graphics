@@ -1,0 +1,4 @@
+add_executable(transform_test transform_test.cpp)
+target_link_libraries(transform_test gtest_main geometry)
+include(GoogleTest)
+gtest_discover_tests(transform_test)

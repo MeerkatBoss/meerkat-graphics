@@ -1,0 +1,1 @@
+#include <geometry/iterators/vertex_iterator.hpp>
