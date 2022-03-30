@@ -63,7 +63,7 @@ namespace geom
     {
         double _sin = sin(angle);
         double _cos = cos(angle);
-        int tmp[2][2];
+        double tmp[2][2];
         tmp[0][0] = _matrix[0][0] * _cos + _matrix[1][0] * _sin;
         tmp[1][0] = -_matrix[0][0] * _sin + _matrix[1][0] * _cos;
         tmp[0][1] = _matrix[0][1] * _cos + _matrix[1][1] * _sin;
