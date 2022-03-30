@@ -62,7 +62,7 @@ namespace geom
         /**
          * @brief Set the rotation angle around object's origin
          *
-         * @param angle - angle of rotation in radians
+         * @param angle angle of rotation in radians in range [-pi/2,+pi/2]
          */
         void setRotation(double angle);
 

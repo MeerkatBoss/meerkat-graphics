@@ -40,7 +40,8 @@ namespace geom
 
     double Transform::rotation() const
     {
-        return atan2(_matrix[0][1], _matrix[0][0]);
+        double angle = atan2(_matrix[0][1], _matrix[0][0]);
+        return angle;
     }
 
     void Transform::setRotation(double angle)
@@ -64,14 +65,19 @@ namespace geom
         double _sin = sin(angle);
         double _cos = cos(angle);
         double tmp[2][2];
+        vector current_scale = this->scale();
+        _matrix[0][0] /= current_scale.x;
+        _matrix[0][1] /= current_scale.x;
+        _matrix[1][0] /= current_scale.y;
+        _matrix[1][1] /= current_scale.y;
         tmp[0][0] = _matrix[0][0] * _cos + _matrix[1][0] * _sin;
         tmp[1][0] = -_matrix[0][0] * _sin + _matrix[1][0] * _cos;
         tmp[0][1] = _matrix[0][1] * _cos + _matrix[1][1] * _sin;
         tmp[1][1] = -_matrix[0][1] * _sin + _matrix[1][1] * _cos;
-        _matrix[0][0] = tmp[0][0];
-        _matrix[0][1] = tmp[0][1];
-        _matrix[1][0] = tmp[1][0];
-        _matrix[1][1] = tmp[1][1];
+        _matrix[0][0] = tmp[0][0] * current_scale.x;
+        _matrix[0][1] = tmp[0][1] * current_scale.x;
+        _matrix[1][0] = tmp[1][0] * current_scale.y;
+        _matrix[1][1] = tmp[1][1] * current_scale.y;
     }
 
     void Transform::rescale(const vector &scale)

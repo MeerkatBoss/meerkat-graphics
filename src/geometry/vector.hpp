@@ -32,6 +32,11 @@ namespace geom
             const double eps = 1e-9;
             return abs(x - other.x) < eps && abs(y - other.y) < eps;
         }
+
+        inline bool operator!=(vector other) const
+        {
+            return !(*this == other);
+        }
     };
 
     inline vector operator*(double k, const vector &v)
